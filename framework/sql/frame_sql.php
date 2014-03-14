@@ -17,9 +17,13 @@ class frame_sql {
         try {
             $dbh = new PDO('mysql:host=' . ADRESSE_IP . ';dbname=' . BDD, USER, MDP);
 
-            $query = $dbh->query($requete);
-            return $query->fetchAll(PDO::FETCH_ASSOC);
-            $dbh->closeCursor();
+            if (strstr($requete, 'INSERT INTO')) {
+                $result = $dbh->exec($requete);
+            } else {
+                $query = $dbh->query($requete);
+                return $query->fetchAll(PDO::FETCH_ASSOC);
+                $dbh->closeCursor();
+            }
         } catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
@@ -99,22 +103,54 @@ class frame_sql {
      * @param type $table
      */
     public function insert($values, $table) {
-        if ($value != NULL || $value != '' || !isset($value)) {
-            foreach ($values as $key => $value) {
-                $champs[] = $key;
+        if (($value != NULL || $value != '' || !isset($value)) && ($table != NULL || $table != '' || !isset($table))) { //verifiaction que les variable sont bien rempli
+            foreach ($values as $key => $value) {//recuparation des champs et des valeur attribuer dans des tableaux
+                if ($key != '' || $key != NULL) {
+                    $champs[] = $key;
+                } else {
+                    print 'ERREUR INSERT : La colonne n\'est pas définit';
+                    exit();
+                }
                 $valeur[] = $value;
             }
-            $champ = implode(',', $champs);
+            $champ = implode(',', $champs); //conversion des champs et des valeur en string séparer par des virgule
             $value = implode(',', $valeur);
-            $requete = 'INSERT INTO ' . $table . ' SET ' . $champ . ' VALUE ' . $value;
+            $requete = 'INSERT INTO ' . $table . ' (' . $champ . ') VALUES ("' . $value . '")'; //construction de la requête
             $requete .= ';';
-            $result_request = $this->connect_bdd_and_recup($requete);
-            $resultat = array();
-
-            return $result_request;
+            $this->connect_bdd_and_recup($requete); //execution de la requête
         } else {
             print 'ERREUR AU INSERT';
         }
+    }
+
+    /**
+     * Faire un delete dans la base
+     * @param array $row tableau associatif des conditions de suppression
+     * @param string $table table où la ligne doit être supprimer
+     * @param boolean $multidelete permet la suppression de plusieur ligne. si faux et plusieur ligne détécter renvoie une erreur
+     */
+    public function delete($row, $table, $multidelete) {
+        if (($row != NULL || $row != '' || !isset($row)) && ($table != NULL || $table != '' || !isset($table))) { //verification des variable
+            $result = $this->select('id', $table, $row); //recherche des colonnes
+
+            if (count($result) && $multidelete) {
+                foreach ($result as $rows) {//pour chaque resultat du select
+                    foreach ($rows as $key => $line) {//supprsion de la ligne
+                        $requete = 'DELETE FROM ' . $table . ' WHERE ' . $key . ' = ' . $line;
+                        $this->connect_bdd_and_recup($requete); //execution de la requête
+                    }
+                }
+            } else {
+                print 'ERREUR AU DELETE CONDITION POUR LA SUPRRESSION PAS ASSEZ PRECIS, PLUSIEUR RESULTAT TROUVE';
+                exit();
+            }
+        } else {
+            print 'ERREUR AU DELETE';
+        }
+    }
+
+    public function update() {
+        
     }
 
 }
