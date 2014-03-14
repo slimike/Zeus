@@ -1,0 +1,10 @@
+Dans le dossier framework, il y a un fichier const_conf.php
+A l'intérieur il doit y avoir uniquement des constantes pour les chemns des différentes classe
+
+SQL
+
+dans framework/sql il y a un fichier nommer sql_const_conf.php où il n'y a que les paramaètres de connexion à la bdd.
+Tout paramètre pour la classe SQL doit être dans ce fichier
+
+
+Toutes classes créer doit avoir un fichier de constante s'il lui en faut.
