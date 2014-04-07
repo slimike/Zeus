@@ -148,8 +148,15 @@ class frame_sql {
             print 'ERREUR AU DELETE';
         }
     }
-
-    public function update() {
+/**
+ * 
+ * @param type $a_liste_table
+ * @param type $a_liste_champs
+ * @param type $a_liste_values
+ * @param type $a_liste_condition
+ */
+    public function update($a_liste_table, $a_liste_champs, $a_liste_values, $a_liste_condition) {
+        $s_update = ' UPDATE table SET(champs1= setchmaps1,champs2=setchamps2)';
         
     }
 
