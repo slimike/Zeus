@@ -63,10 +63,7 @@ class Parution
         $this->quantite = $quantite;
     }
 
-    public function setCouverture($pathFile)
-    {
-        
-    }
+   
     /*
      * creation ou modification d'une parution
      */

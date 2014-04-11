@@ -3,11 +3,11 @@
 class Couverture extends Parution
 {
      //recuperation du fichier image
-    public function recupAvatar()
+    public function recupCouverture()
     {
         
     }
-    public function userAvatar($pathFile)
+    public function parutionCouverture($pathFile)
     {
         parent->setCouverture($pathFile);
     }
