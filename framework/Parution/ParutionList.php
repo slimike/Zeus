@@ -1,12 +1,5 @@
 <?php
-
-class StatParution{
-    
-    
-    /**
-     * @param int Nb de parution a retourner
-     * @return array Retourne la liste des partuion les plus vues
-     */
+class ParutionList{
     public function getParutionPlusVue($i_nbParution = NULL)
     {
         
@@ -34,4 +27,10 @@ class StatParution{
     {
         
     }
+    
+    public function getParution()
+    {
+        
+    }
 }
+
