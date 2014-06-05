@@ -1,0 +1,27 @@
+<?php
+echo $this->doctype();
+?>
+<head>
+    <?php echo $this->headMeta()->setCharset('UTF-8');?>
+    <?php echo $this->headLink()->prependStylesheet('/css/bootstrap-theme.min.css'); ?>
+    <?php echo $this->headLink()->prependStylesheet('/css/bootstrap.min.css'); ?>
+    <?php echo $this->headLink()->prependStylesheet('/css/jquery-ui-1.10.4.min.css'); ?>
+    
+</head>
+<body>
+    
+    <?php
+    echo $this->layout()->content;
+  
+    ?>
+
+    
+<?php 
+
+echo $this->headScript()->prependFile('/js/bootstrap.min.js');  
+echo $this->headScript()->prependFile('/js/jquery-2.1.1.js');
+echo $this->headScript()->prependFile('/js/jquery-ui-1.10.4.js');
+
+
+?> 
+</body>
