@@ -24,7 +24,6 @@ class ParutionController extends Zend_Controller_Action
 
         if($this->getRequest()->isPost()){
             //Récupération des données
-            $data = $this->getRequest()->getPost();
                 $parution = new Application_Model_Parution();
 
             $parution->setId(0)
@@ -43,6 +42,7 @@ class ParutionController extends Zend_Controller_Action
                 //Instance du Mapper
                 $parutionMapper = new Application_Model_ParutionMapper();
                 //Save des données
+                var_dump('toto');exit();
                 $parutionMapper->save($parution);                
 
                 //Réponse à la vue
