@@ -72,7 +72,7 @@ class UserController extends Zend_Controller_Action
         //Envoie des données à la vue
         $this->view->user = $user;
     }
-    public function fetchAllAction()
+    public function fetchallAction()
     {
        
         //Instance du Mapper
