@@ -30,21 +30,19 @@ class Application_Model_ParutionMapper
     public function save(Application_Model_Parution $parution)
     {
         $data = array (
-            'titre_parution'=> $parution->getTitre_parution(),
-            'auteur_parution' =>$parution->getAuteur_parution(),
-            'theme_parution' =>$parution->getTheme_parution(),
-            'date_parution'=>$parution->getDate_parution(),
-            'qte_dispo_partuion'=>$parution->getQte_dispo_partuion(),
-            'qte_total_partuion'=>$parution->getQte_total_partuion(),
-            'editeur_parution'=>$parution->getEditeur_parution(),
-            'collection_parution'=>$parution->getCollection_parution(),
-            'description_parution'=>$parution->getDescription_parution(),
-            'publier_parution'=>$parution->getPublier_parution(),
-            'commentaire_id_commentaire'=>$parution->getCommentaire_id_commentaire()
+            'titre_parution'=> $parution->getTitreParution(),
+            'auteur_parution' =>$parution->getAuteurParution(),
+            'theme_parution' =>$parution->getThemeParution(),
+            'date_parution'=>$parution->getDateParution(),
+            'qte_dispo_partuion'=>$parution->getQte_dispoPartuion(),
+            'qte_total_partuion'=>$parution->getQte_totalPartuion(),
+            'editeur_parution'=>$parution->getEditeurParution(),
+            'collection_parution'=>$parution->getCollectionParution(),
+            'description_parution'=>$parution->getDescriptionParution(),
+            'publier_parution'=>$parution->getPublierParution(),
+            'commentaire_id_commentaire'=>$parution->getCommentaireIdCommentaire()
 
         );
-        var_dump('toto');
-                exit();
         $this->getDbTable()->insert($data);
     }
 
