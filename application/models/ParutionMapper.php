@@ -27,7 +27,7 @@ class Application_Model_ParutionMapper
         return $this->_dbTable;
     }
 
-    public function savedd(Application_Model_Parution $parution)
+    public function save(Application_Model_Parution $parution)
     {
         $data = array (
             'titre_parution'=> $parution->getTitreParution(),
@@ -43,7 +43,7 @@ class Application_Model_ParutionMapper
             'commentaire_id_commentaire'=>$parution->getCommentaireIdCommentaire()
 
         );
-        $this->getDbTable()->save($data);
+        $this->getDbTable()->insert($data);
     }
 
     public function find($id)
@@ -84,18 +84,18 @@ class Application_Model_ParutionMapper
     public function toModel($row)
     {
         $parution = new Application_Model_Parution();
-        $parution->setId($row->id_parution)
-            ->setTitre_parution($row->Titre_parution)
-            ->setAuteur_parution($row->auteur_parution)
-            ->setTheme_parution($row->prenom_user)
-            ->setDate_parution($row->adresse_1_user)
-            ->setQte_dispo_parution($row->qte_dispo_parution)
-            ->setQte_total_parution($row->qte_total_parution)
-            ->setEditeur_parution($row->editeur_parution)
-            ->setCollection_parution($row->collection_parution)
-            ->setDescription_parution($row->description_parution)
-            ->setPublier_parution($row->publier_parution)
-            ->setCommentaire_id_commentaire($row->Commentaire_id_commentaire);
+        $parution->setIdParution($row->id_parution)
+            ->setTitreParution($row->Titre_parution)
+            ->setAuteurParution($row->auteur_parution)
+            ->setThemeParution($row->prenom_user)
+            ->setDateParution($row->adresse_1_user)
+            ->setQte_dispoParution($row->qte_dispo_parution)
+            ->setQte_totalParution($row->qte_total_parution)
+            ->setEditeurParution($row->editeur_parution)
+            ->setCollectionParution($row->collection_parution)
+            ->setDescriptionParution($row->description_parution)
+            ->setPublierParution($row->publier_parution)
+            ->setCommentaireIdCommentaire($row->Commentaire_id_commentaire);
         return $parution;
     }
 }
