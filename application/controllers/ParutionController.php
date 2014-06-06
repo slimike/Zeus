@@ -22,7 +22,6 @@ class ParutionController extends Zend_Controller_Action
     public function createAction()
     {
         
-        
             //Récupération des données
             $parution = new Application_Model_Parution();
 
