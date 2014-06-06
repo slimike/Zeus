@@ -17,7 +17,7 @@ class Application_Model_DroitMapper {
 
     public function getDbTable() {
         if (null === $this->_dbTable) {
-            $this->setDbTable('Application_Models_DbTable_Droit');
+            $this->setDbTable('application_models_DbTable_Droit');
         }
         return $this->_dbTable;
     }
