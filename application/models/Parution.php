@@ -1,6 +1,7 @@
 <?php
 class Application_Model_Parution
 {
+    protected $_id_parution;
     protected $_titre_parution;
     protected $_auteur_parution;
     protected $_theme_parution;
@@ -12,8 +13,18 @@ class Application_Model_Parution
     protected $_description_parution;
     protected $_publier_parution;
     protected $_commentaire_id_commentaire;
+    
+    
+    public function getIdParution() {
+        return $this->_id_parution;
+    }
 
-    /**
+    public function setIdParution($_id_parution) {
+        $this->_id_parution = $_id_parution;
+        return $this;
+    }
+
+        /**
      * @param mixed $auteur_parution
      */
     public function setAuteurParution($auteur_parution)
@@ -28,7 +39,7 @@ class Application_Model_Parution
     public function getAuteurParution()
     {
         return $this->_auteur_parution;
-    }
+    } 
 
     /**
      * @param mixed $collection_parution

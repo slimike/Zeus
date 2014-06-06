@@ -22,15 +22,15 @@ class Application_Model_ParutionMapper
     {
         if(null === $this->_dbTable)
         {
-            $this->setDbTable('Application_Model_DbTable_User');
+            $this->setDbTable('Application_Model_DbTable_Parution');
         }
         return $this->_dbTable;
     }
 
-    public function save(Application_Model_User $user)
+    public function save(Application_Model_Parution $parution)
     {
         $data = array (
-            'titre_parution;'=> $parution->getTitre_parution(),
+            'titre_parution'=> $parution->getTitre_parution(),
             'auteur_parution' =>$parution->getAuteur_parution(),
             'theme_parution' =>$parution->getTheme_parution(),
             'date_parution'=>$parution->getDate_parution(),
@@ -43,6 +43,8 @@ class Application_Model_ParutionMapper
             'commentaire_id_commentaire'=>$parution->getCommentaire_id_commentaire()
 
         );
+        var_dump('toto');
+                exit();
         $this->getDbTable()->insert($data);
     }
 
