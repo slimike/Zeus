@@ -39,7 +39,7 @@ class Application_Model_Parution
     public function getAuteurParution()
     {
         return $this->_auteur_parution;
-    }
+    } 
 
     /**
      * @param mixed $collection_parution
