@@ -25,7 +25,7 @@ class UserController extends Zend_Controller_Action
             //Récupération des données        
 
             $user = new Application_Model_User();
-            $user->setIdUser('1'/*$data['id_user']*/)
+            $user -> setIdUser('1'/*$data['id_user']*/)
                 ->setEmailUser('billy@orange.fr'/*$data['mailUser']*/)
                 ->setNomUser('wallace'/*$data['nomUser']*/)
                 ->setPrenomUser('grommit'/*$data['prenomUser']*/)
