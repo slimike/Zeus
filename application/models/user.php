@@ -151,7 +151,7 @@ public function setIdUser($id_user) {
     /**
      * @param mixed $mail_user
      */
-    public function setMailUser($mail_user)
+    public function setEmailUser($mail_user)
     {
         $this->_mail_user = $mail_user;
         return $this;
@@ -160,7 +160,7 @@ public function setIdUser($id_user) {
     /**
      * @return mixed
      */
-    public function getMailUser()
+    public function getEmailUser()
     {
         return $this->_mail_user;
     }
