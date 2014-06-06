@@ -22,8 +22,7 @@ class UserController extends Zend_Controller_Action
     public function createAction()
     {
         //if($this->getRequest()->isPost()){
-            //Récupération des données
-            $data = $this->getRequest()->getPost();
+            //Récupération des données        
 
             $user = new Application_Model_User();
             $user->setId_user('1'/*$data['id_user']*/)
