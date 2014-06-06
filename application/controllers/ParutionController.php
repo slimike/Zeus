@@ -41,7 +41,7 @@ class ParutionController extends Zend_Controller_Action
                 //Instance du Mapper
                 $parutionMapper = new Application_Model_ParutionMapper();
                 //Save des données                
-                $parutionMapper->save($parution);
+                $parutionMapper->savedd($parution);
                 
 
                 //Réponse à la vue

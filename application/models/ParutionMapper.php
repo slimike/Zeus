@@ -27,7 +27,7 @@ class Application_Model_ParutionMapper
         return $this->_dbTable;
     }
 
-    public function save(Application_Model_Parution $parution)
+    public function savedd(Application_Model_Parution $parution)
     {
         $data = array (
             'titre_parution'=> $parution->getTitreParution(),
