@@ -65,7 +65,7 @@ class ParutionController extends Zend_Controller_Action
         $this->view->parution = $parution;
     }
 
-    public function fetchAllAction()
+    public function fetchallAction()
     {
         //Instance du Mapper
         $parutionMapper = new Application_Model_ParutionMapper();
