@@ -43,8 +43,6 @@ class Application_Model_ParutionMapper
             'commentaire_id_commentaire'=>$parution->getCommentaireIdCommentaire()
 
         );
-        var_dump('toto');
-                exit();
         $this->getDbTable()->insert($data);
     }
 
