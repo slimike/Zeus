@@ -24,7 +24,7 @@ class ParutionController extends Zend_Controller_Action
         
         
             //Récupération des données
-                $parution = new Application_Model_Parution();
+            $parution = new Application_Model_Parution();
 
             $parution->setId(0)
                     ->setTitre_parution('cololasticot')
