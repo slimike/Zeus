@@ -22,11 +22,10 @@ class UserController extends Zend_Controller_Action
     public function createAction()
     {
         //if($this->getRequest()->isPost()){
-            //Récupération des données
-            $data = $this->getRequest()->getPost();
+            //Récupération des données        
 
             $user = new Application_Model_User();
-            $user->setId('1'/*$data['id_user']*/)
+            $user->setId_user('1'/*$data['id_user']*/)
                 ->setEmail_user('billy@orange.fr'/*$data['mail_user']*/)
                 ->setNom_user('wallace'/*$data['nom_user']*/)
                 ->setPrenom_user('grommit'/*$data['prenom_user']*/)
