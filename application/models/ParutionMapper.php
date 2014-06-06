@@ -30,7 +30,7 @@ class Application_Model_ParutionMapper
     public function save(Application_Model_Parution $parution)
     {
         $data = array (
-            'titre_parution;'=> $parution->getTitre_parution(),
+            'titre_parution'=> $parution->getTitre_parution(),
             'auteur_parution' =>$parution->getAuteur_parution(),
             'theme_parution' =>$parution->getTheme_parution(),
             'date_parution'=>$parution->getDate_parution(),
