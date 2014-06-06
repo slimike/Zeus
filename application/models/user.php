@@ -1,4 +1,4 @@
-<?
+<?php
 class Application_Model_User
 {
 protected $_mail_user;
@@ -17,6 +17,17 @@ protected $_parution_id_parution;
 protected $_actif_user;
 protected $_valid_mail_user;
 protected $_activation_user;
+protected $_id_user;
+
+
+public function getId_user() {
+    return $this->_id_user;
+}
+
+public function setId_user($id_user) {
+    $this->_id_user = $id_user;
+    return $this;
+}
 
     /**
      * @param mixed $actif_user
