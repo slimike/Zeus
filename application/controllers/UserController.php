@@ -78,7 +78,7 @@ class UserController extends Zend_Controller_Action
         //Instance du Mapper
         $userMapper = new Application_Model_UserMapper();
         //Find
-        $user = $userMapper->find($this->getRequest()->getParam('id'));
+        $user = $userMapper->fetchAll();
         //Envoie des données à la vue
         $this->view->user = $user;
     }
