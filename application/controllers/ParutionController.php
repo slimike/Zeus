@@ -22,22 +22,21 @@ class ParutionController extends Zend_Controller_Action
     public function createAction()
     {
         
-        
             //Récupération des données
             $parution = new Application_Model_Parution();
 
-            $parution->setId(0)
-                    ->setTitre_parution('cololasticot')
-                    ->setAuteur_parution('cyrano')
-                    ->setTheme_parution('siencF')
-                    ->setDate_parution('20/10/2014')
-                    ->setQte_dispo_parution(1)
-                    ->setQte_total_parution(4)
-                    ->setEditeur_parution('flamarion')
-                    ->setCollection_parution('colection')
-                    ->setDescription_parution('livre qui dechire wesh')
-                    ->setPublier_parution('dispo')
-                    ->setCommentaire_id_commentaire(1);
+            $parution->setIdParution(0)
+                    ->setTitreParution('cololasticot')
+                    ->setAuteurParution('cyrano')
+                    ->setThemeParution('siencF')
+                    ->setDateParution('20/10/2014')
+                    ->setQteDispoParution(1)
+                    ->setQteTotalParution(4)
+                    ->setEditeurParution('flamarion')
+                    ->setCollectionParution('colection')
+                    ->setDescriptionParution('livre qui dechire wesh')
+                    ->setPublierParution('dispo')
+                    ->setCommentaireIdCommentaire(1);
 
                 //Instance du Mapper
                 $parutionMapper = new Application_Model_ParutionMapper();

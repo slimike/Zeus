@@ -59,7 +59,7 @@ class Application_Model_UserMapper
         }
         $row = $result -> current();
         $user = new Application_Model_User();
-        $user->setId($row->id)
+        $user->setId_user($row->id)
             ->setEmail_user($row->email_user)
             ->setNom_user($row->nom_user)
             ->setPrenom_user($row->prenom_user)
