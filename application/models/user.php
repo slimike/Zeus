@@ -19,15 +19,16 @@ protected $_valid_mail_user;
 protected $_activation_user;
 protected $_id_user;
 
+public function setIdUser($id_user) {
+    $this->_id_user = $id_user;
+    return $this;
+} 
 
 public function getIdUser() {
     return $this->_id_user;
 }
 
-public function setIdUser($id_user) {
-    $this->_id_user = $id_user;
-    return $this;
-}
+
 
     /**
      * @param mixed $actif_user
