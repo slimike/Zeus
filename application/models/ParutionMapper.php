@@ -43,7 +43,7 @@ class Application_Model_ParutionMapper
             'commentaire_id_commentaire'=>$parution->getCommentaireIdCommentaire()
 
         );
-        $this->getDbTable()->insert($data);
+        $this->getDbTable()->save($data);
     }
 
     public function find($id)
