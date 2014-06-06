@@ -20,11 +20,11 @@ protected $_activation_user;
 protected $_id_user;
 
 
-public function getId_user() {
+public function getIdUser() {
     return $this->_id_user;
 }
 
-public function setId_user($id_user) {
+public function setIdUser($id_user) {
     $this->_id_user = $id_user;
     return $this;
 }
