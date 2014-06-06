@@ -19,15 +19,16 @@ protected $_valid_mail_user;
 protected $_activation_user;
 protected $_id_user;
 
+public function setIdUser($id_user) {
+    $this->_id_user = $id_user;
+    return $this;
+} 
 
-public function getId_user() {
+public function getIdUser() {
     return $this->_id_user;
 }
 
-public function setId_user($id_user) {
-    $this->_id_user = $id_user;
-    return $this;
-}
+
 
     /**
      * @param mixed $actif_user
@@ -151,7 +152,7 @@ public function setId_user($id_user) {
     /**
      * @param mixed $mail_user
      */
-    public function setMailUser($mail_user)
+    public function setEmailUser($mail_user)
     {
         $this->_mail_user = $mail_user;
         return $this;
@@ -160,7 +161,7 @@ public function setId_user($id_user) {
     /**
      * @return mixed
      */
-    public function getMailUser()
+    public function getEmailUser()
     {
         return $this->_mail_user;
     }
