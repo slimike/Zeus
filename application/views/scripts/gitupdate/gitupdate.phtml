@@ -1,5 +1,5 @@
 <?php
 
-echo shell_exec('cd /var/www/ && sh updatezeus.sh'); 
+echo shell_exec('cd /var/www/zeus && git fetch && git rebase origin/master 2>&1'); 
 
 
