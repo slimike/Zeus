@@ -22,7 +22,7 @@ class Application_Model_ParutionMapper
     {
         if(null === $this->_dbTable)
         {
-            $this->setDbTable('Application_Model_DbTable_User');
+            $this->setDbTable('Application_Model_DbTable_Parution');
         }
         return $this->_dbTable;
     }
