@@ -18,7 +18,8 @@ class Application_Plugin_menuParution {
     }
 
     public function getTypeParution() {
-        
+        $type = new Application_Model_TypeParutionMapper();
+        return $type->fetchAll();
     }
 
 }
