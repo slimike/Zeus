@@ -1,27 +1,32 @@
-<?php
-echo $this->doctype();
-?>
-<head>
-    <?php echo $this->headMeta()->setCharset('UTF-8');?>
-    <?php echo $this->headLink()->prependStylesheet('/css/bootstrap-theme.min.css'); ?>
-    <?php echo $this->headLink()->prependStylesheet('/css/bootstrap.min.css'); ?>
-    <?php echo $this->headLink()->prependStylesheet('/css/jquery-ui-1.10.4.min.css'); ?>
-    
+<?=$this->doctype ();?>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Zeus - Accueil</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= $this->headLink()->prependStylesheet('/css/bootstrap-theme.min.css'); ?>
+    <?= $this->headLink()->prependStylesheet('/css/bootstrap.min.css'); ?>
+    <?= $this->headLink()->prependStylesheet('/css/jquery-ui-1.10.4.min.css'); ?>
+    <?= $this->headScript ()->prependFile ( '/js/modernizr-2.6.2-respond-1.1.0.min.js' ); ?>
 </head>
 <body>
-    
-    <?php
-    echo $this->layout()->content;
-  
-    ?>
-
-    
-<?php 
-
-echo $this->headScript()->prependFile('/js/bootstrap.min.js');  
-echo $this->headScript()->prependFile('/js/jquery-2.1.1.js');
-echo $this->headScript()->prependFile('/js/jquery-ui-1.10.4.js');
-
-
-?> 
+	<div class="container">
+		<header>Header</header>
+		<section class="row">
+			<?=$this->layout ()->content;?>
+		</section>
+		<footer>Footer</footer>	
+	</div>
+	<?php
+		echo $this->headScript ()->prependFile ( '/js/bootstrap.min.js' );
+		echo $this->headScript ()->prependFile ( '/js/jquery-1.11.0.min.js' );
+		echo $this->headScript ()->prependFile ( '/js/jquery-ui-1.10.4.min.js' );
+		echo $this->headScript ()->prependFile ( '/js/plugins.js' );
+		echo $this->headScript ()->prependFile ( '/js/main.js' );
+	?>
 </body>
