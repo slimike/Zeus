@@ -12,17 +12,44 @@
     <?= $this->headLink()->prependStylesheet('/css/bootstrap-theme.min.css'); ?>
     <?= $this->headLink()->prependStylesheet('/css/bootstrap.min.css'); ?>
     <?= $this->headLink()->prependStylesheet('/css/jquery-ui-1.10.4.min.css'); ?>
-    
+    <style>
+		header .col-md-2{height:80px; background:yellow}
+		header .col-md-6{height:80px; background:grey}
+		header .col-md-4{height:80px; background:pink}
+		
+		header .col-md-7{height:20px; background:blue}
+		header .col-md-5{height:20px; background:brown}
+		
+		
+		
+	</style>
 </head>
 <body>
 	<div class="container">
-		<header>Header</header>
+		<header class="row">
+			<div class="row">
+				<div class="col-md-2">Logo</div>
+				<div class="col-md-6">Phrase administrable</div>
+				<div class="col-md-4">espace connexion</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-7">Onglets thèmes administrables</div>
+				<div class="col-md-5">Barre de recherche rapide</div>
+			</div>
+			
+		</header>
 		<div class="row">
 			<aside class="col-md-2">Col gauche</aside>
 			<article class="col-md-8"><?=$this->layout ()->content;?></article>
 			<aside class="col-md-2">Col droite</aside>
 		</div>
-		<footer>Footer</footer>	
+		<footer class="row">
+			<div class="col-md-3">Plan du site</div>
+			<div class="col-md-3">Motes clés</div>
+			<div class="col-md-3">espace téléchargement</div>
+			<div class="col-md-3">Liens utles</div>
+		</footer>	
 	</div>
 	<?php
 		echo $this->headScript ()->prependFile ( '/js/bootstrap.min.js' );
