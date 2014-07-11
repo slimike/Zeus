@@ -13,6 +13,9 @@
     <?= $this->headLink()->prependStylesheet('/css/bootstrap.min.css'); ?>
     <?= $this->headLink()->prependStylesheet('/css/jquery-ui-1.10.4.min.css'); ?>
     <style>
+		body{
+			font-size:100%;
+		}
 		header .col-md-2{height:80px; background:yellow}
 		header .col-md-6{height:80px; background:grey}
 		header .col-md-4{height:80px; background:pink}
@@ -52,10 +55,11 @@
 		</footer>	
 	</div>
 	<?php
-		echo $this->headScript ()->prependFile ( '/js/bootstrap.min.js' );
 		echo $this->headScript ()->prependFile ( '/js/jquery-1.11.0.min.js' );
+		echo $this->headScript ()->prependFile ( '/js/bootstrap.min.js' );
 		echo $this->headScript ()->prependFile ( '/js/jquery-ui-1.10.4.min.js' );
 		echo $this->headScript ()->prependFile ( '/js/plugins.js' );
 		echo $this->headScript ()->prependFile ( '/js/main.js' );
+		echo $this->headScript ()->prependFile ( '/js/jquery.fittext.js' );
 	?>
 </body>
