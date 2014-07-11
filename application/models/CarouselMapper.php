@@ -12,7 +12,7 @@ class Application_Model_CarouselMapper
 
         if (!$dbTable instanceof Zend_Db_Table_Abstract)
         {
-            throw new Exeption ('Invalid table data');
+            throw new Exception ('Invalid table data');
         }
         $this->_dbTable = $dbTable;
         return $this;
