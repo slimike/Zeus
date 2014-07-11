@@ -1,13 +1,14 @@
 <?php
 
-class CarouselController extends Zend_Controller_Action
+class CarrouselController extends Zend_Controller_Action
 {
 	public function indexAction()
 	{
-		$carouselMapper = new Application_Model_CarouselMapper();
+		ini_set('display_errors', '1');
+		/*$carouselMapper = new Application_Model_CarouselMapper();
 		$carousel = $carouselMapper->fetchAll();
 
-		$this->view->assign('carousel', $carousel);
+		$this->view->assign('carrousel', $carousel);*/
 	}
 
 	public function readAction()
@@ -17,6 +18,6 @@ class CarouselController extends Zend_Controller_Action
 		$carouselMapper = new Application_Model_CarouselMapper();
 		$carousel = $carouselMapper->find($params['id']);
 
-		$this->view->assign("carousel", $carousel);
+		$this->view->assign("carrousel", $carousel);
 	}	
 }
