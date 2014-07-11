@@ -17,9 +17,11 @@
 <body>
 	<div class="container">
 		<header>Header</header>
-		<section class="row">
-			<?=$this->layout ()->content;?>
-		</section>
+		<div class="row">
+			<aside class="col-md-2">Col gauche</aside>
+			<article class="col-md-8"><?=$this->layout ()->content;?></article>
+			<aside class="col-md-2">Col droite</aside>
+		</div>
 		<footer>Footer</footer>	
 	</div>
 	<?php
